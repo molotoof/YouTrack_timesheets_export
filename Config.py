@@ -2,12 +2,11 @@ import os
 
 
 class Config:
-    person_name = "Русанов Михаил Александрович"
-    filename = "./youtrack_export/rma.html"
-    month_and_year_suffix = "01.2022"
-    start_date = 10
+    data_folder = "./youtrack_export/"
+    month_and_year_suffix = "08.2022"
+    start_date = 1
     end_date = 31
-    work_hours_per_day_requirement = 4
+    work_hours_per_day_requirement = 8
     time_multiplier_mapper = {"ч": 60,
                               "м": 1,
                               "д": work_hours_per_day_requirement * 60}
@@ -22,7 +21,11 @@ class Config:
                       "SWOYS": "SWOYS",
                       "BI": "Аналитика и разработка математических моделей",
                       "UO": "Ugra Open (МСП)",
-                      "Staff": "ИС Кадры"}
+                      "Staff": "ИС Кадры",
+                      "NLPOGV": "Вне проектов",
+                      "ANK": "АНК",
+                      "IDD": "Интеграция СЭД Дело и Директум",
+                      "investment": "Инвест. проекты"}
 
     youtrack_access_token = os.environ.get("YOUTRACK_TOKEN")
     youtrack_headers = {"Authorization": f"Bearer {youtrack_access_token}",
